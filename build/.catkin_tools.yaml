@@ -1,0 +1,6 @@
+devel_space: /home/joey/projects/skynet/devel
+install: false
+install_space: /home/joey/projects/skynet/install
+profile: default
+source_space: /home/joey/projects/skynet/src
+workspace: /home/joey/projects/skynet

@@ -1,0 +1,8 @@
+prefix=/home/joey/projects/skynet/devel/.private/navigation_test
+
+Name: navigation_test
+Description: Description of navigation_test
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/joey/projects/skynet/devel/.private/navigation_test/lib 
+Requires: 

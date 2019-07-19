@@ -1,0 +1,25 @@
+[35m[1mScanning dependencies of target _location_monitor_generate_messages_check_deps_LandmarkDistance[0m
+[35m[1mScanning dependencies of target location_monitor_node[0m
+[  0%] Built target _location_monitor_generate_messages_check_deps_LandmarkDistance
+[35m[1mScanning dependencies of target location_monitor_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target location_monitor_generate_messages_py[0m
+[35m[1mScanning dependencies of target location_monitor_generate_messages_lisp[0m
+[ 11%] [34m[1mGenerating Javascript code from location_monitor/LandmarkDistance.msg[0m
+[ 33%] [34m[1mGenerating Lisp code from location_monitor/LandmarkDistance.msg[0m
+[ 33%] [34m[1mGenerating Python from MSG location_monitor/LandmarkDistance[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/location_monitor_node.dir/src/location_monitor.cpp.o[0m
+[ 44%] Built target location_monitor_generate_messages_nodejs
+[ 44%] Built target location_monitor_generate_messages_lisp
+[35m[1mScanning dependencies of target location_monitor_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target location_monitor_generate_messages_eus[0m
+[ 55%] [34m[1mGenerating EusLisp code from location_monitor/LandmarkDistance.msg[0m
+[ 66%] [34m[1mGenerating C++ code from location_monitor/LandmarkDistance.msg[0m
+[ 77%] [34m[1mGenerating Python msg __init__.py for location_monitor[0m
+[ 77%] Built target location_monitor_generate_messages_py
+[ 88%] [34m[1mGenerating EusLisp manifest code for location_monitor[0m
+[ 88%] Built target location_monitor_generate_messages_cpp
+[ 88%] Built target location_monitor_generate_messages_eus
+[35m[1mScanning dependencies of target location_monitor_generate_messages[0m
+[ 88%] Built target location_monitor_generate_messages
+[100%] [32m[1mLinking CXX executable /home/joey/projects/skynet/devel/.private/location_monitor/lib/location_monitor/location_monitor_node[0m
+[100%] Built target location_monitor_node
