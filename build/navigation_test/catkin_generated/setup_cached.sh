@@ -8,6 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/joey/projects/skynet/devel/.private/navigation_test:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/joey/projects/skynet/devel/.private/navigation_test/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/joey/projects/skynet/devel/.private/navigation_test/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/joey/projects/skynet/build/navigation_test"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/joey/projects/skynet/devel/.private/navigation_test/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/joey/projects/skynet/src/navigation_test:$ROS_PACKAGE_PATH"
