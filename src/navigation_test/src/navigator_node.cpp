@@ -1,26 +1,45 @@
 #include "ros/ros.h"
 #include "geometry_msgs/Twist.h"
 
+class Navigator 
+{
+public:
+	Navigator(const ros::NodeHandle &nh) : nh_(nh)
+	{
+		vel_pub_ = nh_.advertise<geometry_msgs::Twist>("/mobile_base/commands/velocity", 10);
+	}
+
+	void publishData()
+	{
+		vel_msg_.linear.x = 1;
+		vel_msg_.linear.y = 1;
+		vel_msg_.linear.z = 0;
+		vel_msg_.angular.x = 0;
+		vel_msg_.angular.y = 0;
+		vel_msg_.angular.z = 0;
+
+		vel_pub_.publish(vel_msg_);
+	}
+
+
+private:
+	ros::NodeHandle nh_;
+	ros::Publisher vel_pub_;
+	geometry_msgs::Twist vel_msg_;
+
+};
+
 int main(int argc, char *argv[])
 {
 	ros::init(argc, argv, "navigator_node");
 	ros::NodeHandle nh;
-	ros::Publisher vel_pub = nh.advertise<geometry_msgs::Twist>("/mobile_base/commands/velocity", 10);
-
-	geometry_msgs::Twist vel_msg;
-
+	Navigator navigator(nh);
+	
 	ros::Rate l_rate(50);
 
 	while (ros::ok())
 	{
-		vel_msg.linear.x = 1;
-		vel_msg.linear.y = 1;
-		vel_msg.linear.z = 0;
-		vel_msg.angular.x = 0;
-		vel_msg.angular.y = 0;
-		vel_msg.angular.z = 0;
-
-		vel_pub.publish(vel_msg);
+		navigator.publishData();
 		ros::spinOnce();
 		l_rate.sleep();
 	}		
