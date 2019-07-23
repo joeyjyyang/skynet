@@ -1,1 +1,0 @@
-/home/joey/projects/skynet/devel/.private/location_monitor/share/gennodejs/ros/location_monitor/msg/_index.js

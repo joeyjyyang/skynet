@@ -1,1 +1,0 @@
-/home/joey/projects/skynet/devel/.private/location_monitor/share/roseus/ros/location_monitor/manifest.l
