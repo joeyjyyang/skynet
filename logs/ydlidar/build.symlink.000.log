@@ -1,0 +1,5 @@
+Symlinking /home/joey/projects/skynet/devel/lib/pkgconfig/ydlidar.pc
+Symlinking /home/joey/projects/skynet/devel/lib/ydlidar/ydlidar_client
+Symlinking /home/joey/projects/skynet/devel/lib/ydlidar/ydlidar_node
+Symlinking /home/joey/projects/skynet/devel/share/ydlidar/cmake/ydlidarConfig-version.cmake
+Symlinking /home/joey/projects/skynet/devel/share/ydlidar/cmake/ydlidarConfig.cmake

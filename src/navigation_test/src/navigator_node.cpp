@@ -11,10 +11,10 @@ public:
 
 	void publishData()
 	{
-		vel_msg_.linear.x = 1;
-		vel_msg_.linear.y = 1;
+		vel_msg_.linear.x = 2;
+		vel_msg_.linear.y = 0;
 		vel_msg_.linear.z = 0;
-		vel_msg_.angular.x = 0;
+		vel_msg_.angular.x = 2;
 		vel_msg_.angular.y = 0;
 		vel_msg_.angular.z = 0;
 
