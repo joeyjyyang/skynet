@@ -1,0 +1,1 @@
+/home/joey/projects/skynet/devel/.private/navigator/share/navigator/cmake/navigatorConfig.cmake

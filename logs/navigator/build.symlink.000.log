@@ -1,0 +1,4 @@
+Symlinking /home/joey/projects/skynet/devel/lib/pkgconfig/navigator.pc
+Symlinking /home/joey/projects/skynet/devel/lib/navigator/navigator_node
+Symlinking /home/joey/projects/skynet/devel/share/navigator/cmake/navigatorConfig.cmake
+Symlinking /home/joey/projects/skynet/devel/share/navigator/cmake/navigatorConfig-version.cmake

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/joey/projects/skynet/devel/.private/turtlebot_rviz_launchers/setup.sh
