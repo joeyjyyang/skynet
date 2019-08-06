@@ -1,0 +1,11 @@
+[01m[K/home/joey/projects/skynet/src/navigator/src/navigator_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/joey/projects/skynet/src/navigator/src/navigator_node.cpp:60:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KNavigator::driveStraight()[m[K’
+   navigator.driveStraight();
+[01;32m[K                           ^[m[K
+[01m[K/home/joey/projects/skynet/src/navigator/src/navigator_node.cpp:12:7:[m[K [01;36m[Knote: [m[Kcandidate: void Navigator::driveStraight(double, double, bool)
+  void driveStraight(double speed, double distance, bool isForward)
+[01;32m[K       ^[m[K
+[01m[K/home/joey/projects/skynet/src/navigator/src/navigator_node.cpp:12:7:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 0 provided
+make[2]: *** [CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/navigator_node.dir/all] Error 2
+make: *** [all] Error 2

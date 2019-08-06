@@ -11,6 +11,8 @@ ros/ros.h
 /home/joey/projects/skynet/src/navigator/src/ros/ros.h
 geometry_msgs/Twist.h
 /home/joey/projects/skynet/src/navigator/src/geometry_msgs/Twist.h
+iostream
+-
 
 /opt/ros/kinetic/include/geometry_msgs/Twist.h
 string
