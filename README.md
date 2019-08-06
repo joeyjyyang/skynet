@@ -1,5 +1,5 @@
 # skynet
-**Autonomous robot project**
+**Personal autonomous robot project.**
 ## Components
 - Raspberry Pi 3 B+
 - YDLIDAR X4
