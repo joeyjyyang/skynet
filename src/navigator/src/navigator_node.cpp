@@ -10,15 +10,15 @@ public:
 		vel_pub_ = nh_.advertise<geometry_msgs::Twist>("/cmd_vel_mux/input/teleop", 1000);
 	}
 
-	void driveStraight(double speed, double distance, bool isForward)
+	void driveStraight(double linear_speed, double desired_distance, bool forward)
 	{
-		if (isForward)
+		if (forward)
 		{
-			vel_msg_.linear.x = speed;
+			vel_msg_.linear.x = linear_speed;
 		}
 		else
 		{
-			vel_msg_.linear.x = -speed;
+			vel_msg_.linear.x = -linear_speed;
 		}
 		vel_msg_.linear.y = 0;
 		vel_msg_.linear.z = 0;
@@ -26,20 +26,50 @@ public:
 		vel_msg_.angular.y = 0;
 		vel_msg_.angular.z = 0;
 
-		double t0 = ros::Time::now().toSec();
-
+		double timestamp_0 = ros::Time::now().toSec();
 		double current_distance = 0.0;
 		ros::Rate loop_rate(100);
 	
-		while (current_distance < distance)
+		while (current_distance < desired_distance)
 		{
 			vel_pub_.publish(vel_msg_);
-			double t1 = ros::Time::now().toSec();
-			current_distance = speed * (t1-t0);
+			double timestamp_1 = ros::Time::now().toSec();
+			current_distance = linear_speed * (timestamp_1 - timestamp_0);
 			ros::spinOnce();
 			loop_rate.sleep();
 		}
 		vel_msg_.linear.x = 0;
+		vel_pub_.publish(vel_msg_);
+	}
+
+	void turnInPlace(double angular_speed, double relative_angle, double clockwise)
+	{
+		vel_msg_.linear.x =0;
+		vel_msg_.linear.y =0;
+		vel_msg_.linear.z =0;
+		vel_msg_.angular.x = 0;
+		vel_msg_.angular.y = 0;
+
+		if (clockwise)
+		{	
+			vel_msg_.angular.z = -angular_speed;
+		}
+		else
+			vel_msg_.angular.z = angular_speed;
+
+		double t0 = ros::Time::now().toSec();
+		double current_angle = 0.0;
+		ros::Rate loop_rate(100);
+			
+		while (current_angle < relative_angle)
+		{
+			vel_pub_.publish(vel_msg_);
+			double timestamp_1 = ros::Time::now().toSec();
+			current_angle = angular_speed * (timestamp_1 - timestamp_0);
+			ros::spinOnce();
+			loop_rate.sleep();
+		}
+		vel_msg_.angular.z = 0;
 		vel_pub_.publish(vel_msg_);
 	}
 
