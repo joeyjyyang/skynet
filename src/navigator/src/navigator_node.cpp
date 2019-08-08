@@ -57,7 +57,7 @@ public:
 		else
 			vel_msg_.angular.z = angular_speed;
 
-		double t0 = ros::Time::now().toSec();
+		double timestamp_0 = ros::Time::now().toSec();
 		double current_angle = 0.0;
 		ros::Rate loop_rate(100);
 			
@@ -90,6 +90,7 @@ int main(int argc, char *argv[])
 	loop_rate.sleep();
 
 	navigator.driveStraight(1.2, 9.5, true);
+	navigator.turnInPlace(2.1, 12.2, false);
 
 	return 0;
 }

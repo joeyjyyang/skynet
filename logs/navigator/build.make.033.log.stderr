@@ -1,0 +1,7 @@
+[01m[K/home/joey/projects/skynet/src/navigator/src/navigator_node.cpp:[m[K In member function ‘[01m[Kvoid Navigator::turnInPlace(double, double, double)[m[K’:
+[01m[K/home/joey/projects/skynet/src/navigator/src/navigator_node.cpp:68:51:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimestamp_0[m[K’ was not declared in this scope
+    current_angle = angular_speed * (timestamp_1 - timestamp_0);
+[01;32m[K                                                   ^[m[K
+make[2]: *** [CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/navigator_node.dir/all] Error 2
+make: *** [all] Error 2
