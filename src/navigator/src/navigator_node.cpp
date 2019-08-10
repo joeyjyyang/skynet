@@ -1,5 +1,7 @@
 #include "ros/ros.h"
 #include "geometry_msgs/Twist.h"
+#include "nav_msgs/Odometry.h"
+
 #include <cmath>
 
 namespace skynet
@@ -9,7 +11,12 @@ class Navigator
 public:
 	Navigator(const ros::NodeHandle &nh) : nh_(nh), pi_(3.14159265358979323846)
 	{
-		vel_pub_ = nh_.advertise<geometry_msgs::Twist>("/cmd_vel_mux/input/teleop", 1000);
+		vel_pub_ = nh_.advertise<geometry_msgs::Twist>("/cmd_vel_mux/input/teleop", 100);
+		pose_sub_ = nh_.subscribe("/odom", 100, &Navigator::odomCallback, this);
+	}
+
+	~Navigator()
+	{
 	}
 
 	void driveStraight(const double linear_speed, const double desired_distance, const bool forward)
@@ -78,11 +85,17 @@ public:
 		vel_pub_.publish(vel_msg_);
 	}
 
+	void odomCallback(const nav_msgs::Odometry::ConstPtr &odom_msg)
+	{
+		ROS_INFO("Quaternion orientation: x=[%f], y=[%f], z=[%f], w=[%f]", odom_msg->pose.pose.orientation.x, odom_msg->pose.pose.orientation.y, odom_msg->pose.pose.orientation.z, odom_msg->pose.pose.orientation.w);
+	}
+
 private:
 	ros::NodeHandle nh_;
 	ros::Publisher vel_pub_;
 	ros::Subscriber pose_sub_;
 	geometry_msgs::Twist vel_msg_;
+
 	const double pi_;
 };
 }
@@ -93,6 +106,7 @@ int main(int argc, char *argv[])
 	ros::NodeHandle nh;
 	skynet::Navigator navigator(nh);
 
+/*
 	ros::Rate loop_rate(10);
 	
 	loop_rate.sleep();
@@ -102,6 +116,10 @@ int main(int argc, char *argv[])
 	loop_rate.sleep();
 	
 	navigator.turnInPlace(9.5, 45.2, false);
+
+	loop_rate.sleep();
+*/
+	ros::spin();
 
 	return 0;
 }
