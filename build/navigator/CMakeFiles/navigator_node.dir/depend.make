@@ -3,12 +3,18 @@
 
 CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /home/joey/projects/skynet/src/navigator/src/navigator_node.cpp
 CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Point.h
+CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
 CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
+CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
 CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovariance.h
 CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
+CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/geometry_msgs/QuaternionStamped.h
+CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Transform.h
+CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/geometry_msgs/TransformStamped.h
 CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Twist.h
 CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/geometry_msgs/TwistWithCovariance.h
 CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3.h
+CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3Stamped.h
 CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/nav_msgs/Odometry.h
 CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/ros/advertise_options.h
 CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/ros/advertise_service_options.h
@@ -67,6 +73,14 @@ CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include
 CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/ros/wall_timer_options.h
 CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/rosconsole/macros_generated.h
 CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/std_msgs/Header.h
+CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Matrix3x3.h
+CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/MinMax.h
+CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/QuadWord.h
+CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Quaternion.h
+CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Scalar.h
+CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Transform.h
+CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Vector3.h
+CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/tf/transform_datatypes.h
 CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
 
