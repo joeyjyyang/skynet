@@ -2,6 +2,7 @@
 #include "geometry_msgs/Twist.h"
 #include "nav_msgs/Odometry.h"
 #include "tf/transform_datatypes.h"
+#include "geometry_msgs/Vector3.h"
 
 #include <cmath>
 
@@ -13,7 +14,7 @@ public:
 	Navigator(const ros::NodeHandle &nh) : nh_(nh), pi_(3.14159265358979323846)
 	{
 		vel_pub_ = nh_.advertise<geometry_msgs::Twist>("/cmd_vel_mux/input/teleop", 100);
-		pose_sub_ = nh_.subscribe("/odom", 100, &Navigator::odomCallback, this);
+		odom_sub_ = nh_.subscribe("/odom", 100, &Navigator::odomCallback, this);
 	}
 
 	~Navigator()
@@ -94,15 +95,16 @@ public:
 		double roll, pitch, yaw;
 		tf::Matrix3x3(orientation_quaternion).getRPY(roll, pitch, yaw);
 
-		ROS_INFO("Euler orientation: roll=[%f], pitch=[%f], yaw=[%f]", roll, pitch, yaw);
-
-		//ROS_INFO("Quaternion orientation: x=[%f], y=[%f], z=[%f], w=[%f]", odom_msg->pose.pose.orientation.x, odom_msg->pose.pose.orientation.y, odom_msg->pose.pose.orientation.z, odom_msg->pose.pose.orientation.w);
+		orientation_rad_.x = roll;
+		orientation_rad_.y = pitch;
+		orientation_rad_.z = yaw;
 	}
 
 	void turnToDesiredOrientation(const double angular_speed_deg, const double desired_angle_deg)
 	{
-		const double relative_angle_deg = desired_angle_deg - 30.0;
-		bool clockwise = true;
+		const double yaw_deg = degreesToRadians(orientation_rad_.z);
+		const double relative_angle_deg = desired_angle_deg - yaw_deg;
+		const bool clockwise = ((relative_angle_deg < 0) ? true : false);
 		turnInPlace(angular_speed_deg, relative_angle_deg, clockwise);
 	}
 
@@ -115,11 +117,13 @@ public:
 	void quaternionToEuler(const double quaternion)
 	{
 	}
+
 private:
 	ros::NodeHandle nh_;
 	ros::Publisher vel_pub_;
-	ros::Subscriber pose_sub_;
+	ros::Subscriber odom_sub_;
 	geometry_msgs::Twist vel_msg_;
+	geometry_msgs::Vector3 orientation_rad_;
 	nav_msgs::Odometry odom_msg_;
 	const double pi_;
 };
@@ -135,8 +139,8 @@ int main(int argc, char *argv[])
 	
 	loop_rate.sleep();
 	
-	navigator.turnToDesiredOrientation(8.2, 95.2);
-
+	navigator.turnToDesiredOrientation(90.0, 270.0);
+/*
 	loop_rate.sleep();
 	
 	navigator.driveStraight(1.5, 4, true);
@@ -148,6 +152,6 @@ int main(int argc, char *argv[])
 	loop_rate.sleep();
 
 	ros::spin();
-
+*/
 	return 0;
 }

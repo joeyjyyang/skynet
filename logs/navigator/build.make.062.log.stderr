@@ -1,0 +1,22 @@
+[01m[K/home/joey/projects/skynet/src/navigator/src/navigator_node.cpp:[m[K In member function ‘[01m[Kvoid skynet::Navigator::odomCallback(const ConstPtr&)[m[K’:
+[01m[K/home/joey/projects/skynet/src/navigator/src/navigator_node.cpp:95:16:[m[K [01;31m[Kerror: [m[Kuninitialized const ‘[01m[Kroll[m[K’ [-fpermissive]
+   const double roll, pitch, yaw;
+[01;32m[K                ^[m[K
+[01m[K/home/joey/projects/skynet/src/navigator/src/navigator_node.cpp:95:22:[m[K [01;31m[Kerror: [m[Kuninitialized const ‘[01m[Kpitch[m[K’ [-fpermissive]
+   const double roll, pitch, yaw;
+[01;32m[K                      ^[m[K
+[01m[K/home/joey/projects/skynet/src/navigator/src/navigator_node.cpp:95:29:[m[K [01;31m[Kerror: [m[Kuninitialized const ‘[01m[Kyaw[m[K’ [-fpermissive]
+   const double roll, pitch, yaw;
+[01;32m[K                             ^[m[K
+[01m[K/home/joey/projects/skynet/src/navigator/src/navigator_node.cpp:96:64:[m[K [01;31m[Kerror: [m[Kbinding ‘[01m[Kconst double[m[K’ to reference of type ‘[01m[KtfScalar& {aka double&}[m[K’ discards qualifiers
+   tf::Matrix3x3(orientation_quaternion).getRPY(roll, pitch, yaw);
+[01;32m[K                                                                ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/tf/LinearMath/Transform.h:21:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/transform_datatypes.h:41[m[K,
+                 from [01m[K/home/joey/projects/skynet/src/navigator/src/navigator_node.cpp:4[m[K:
+[01m[K/opt/ros/kinetic/include/tf/LinearMath/Matrix3x3.h:365:7:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid tf::Matrix3x3::getRPY(tfScalar&, tfScalar&, tfScalar&, unsigned int) const[m[K’
+  void getRPY(tfScalar& roll, tfScalar& pitch, tfScalar& yaw, unsigned int solution_number = 1) const
+[01;32m[K       ^[m[K
+make[2]: *** [CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/navigator_node.dir/all] Error 2
+make: *** [all] Error 2
