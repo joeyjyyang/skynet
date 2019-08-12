@@ -1,4 +1,0 @@
-[35m[1mScanning dependencies of target navigator_node[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /home/joey/projects/skynet/devel/.private/navigator/lib/navigator/navigator_node[0m
-[100%] Built target navigator_node

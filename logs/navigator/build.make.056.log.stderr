@@ -1,5 +1,0 @@
-[01m[K/home/joey/projects/skynet/src/navigator/src/navigator_node.cpp:5:36:[m[K [01;31m[Kfatal error: [m[KLinearMath/btMatrix3x3.h: No such file or directory
-compilation terminated.
-make[2]: *** [CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o] Error 1
-make[1]: *** [CMakeFiles/navigator_node.dir/all] Error 2
-make: *** [all] Error 2

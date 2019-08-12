@@ -1,7 +1,0 @@
-[01m[K/home/joey/projects/skynet/src/navigator/src/navigator_node.cpp:[m[K In member function ‘[01m[Kvoid skynet::Navigator::odomCallback(const ConstPtr&)[m[K’:
-[01m[K/home/joey/projects/skynet/src/navigator/src/navigator_node.cpp:93:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst ConstPtr {aka const class boost::shared_ptr<const nav_msgs::Odometry_<std::allocator<void> > >}[m[K’ has no member named ‘[01m[Kpose[m[K’
-   tf::quaternionMsgToTF(odom_msg.pose.pose.orientation, orientation_quaternion); 
-[01;32m[K                                  ^[m[K
-make[2]: *** [CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o] Error 1
-make[1]: *** [CMakeFiles/navigator_node.dir/all] Error 2
-make: *** [all] Error 2

@@ -3,3 +3,5 @@
 src/location_monitor
 src/ydlidar
 src/turtlebot_rviz_launchers
+logs/
+

@@ -1,8 +1,0 @@
-Symlinking /home/joey/projects/skynet/devel/./setup.sh
-Symlinking /home/joey/projects/skynet/devel/./_setup_util.py
-Symlinking /home/joey/projects/skynet/devel/./setup.zsh
-Symlinking /home/joey/projects/skynet/devel/./env.sh
-Symlinking /home/joey/projects/skynet/devel/./setup.bash
-Symlinking /home/joey/projects/skynet/devel/lib/pkgconfig/catkin_tools_prebuild.pc
-Symlinking /home/joey/projects/skynet/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
-Symlinking /home/joey/projects/skynet/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
