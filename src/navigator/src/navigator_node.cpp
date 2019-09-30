@@ -118,6 +118,10 @@ public:
 	{
 	}
 
+	void moveToGoal()
+	{
+	}
+
 private:
 	ros::NodeHandle nh_;
 	ros::Publisher vel_pub_;

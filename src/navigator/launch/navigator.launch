@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+	
+  <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
+    <arg name="world_file" default="/opt/ros/kinetic/share/turtlebot_gazebo/worlds/empty.world" />
+  </include>
+
+  <node name="navigator_node" pkg="navigator" type="navigator_node" output="screen" />
+
+</launch>
